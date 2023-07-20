@@ -5,3 +5,8 @@ tex/*.toc
 tex/*.f*
 tex/*.out
 tex/*.pdf
+
+# editor specific
+.vscode/
+*swp
+
