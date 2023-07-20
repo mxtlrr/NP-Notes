@@ -1,0 +1,24 @@
+name: Push
+on: [push]
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Dependencies
+        run: |
+        sudo apt update -y && sudo apt install exlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra -y
+      - name: Check out repository code
+        uses: actions/checkout@v3
+        with:
+          github-token: ${{ secrets.github_token }}
+          output-file: false
+      - name: Compile
+        run: cd tex/ && pdflatex physics.tex -o physics.pdf
+      - name: Create Release
+        uses: actions/create-release@v1
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
+          with: tag_name: ${{ steps.changelog.outputs.tag }}
+          release_name: ${{ steps.changelog.outputs.tag }}
+          bodyFile: "tex/physics.pdf"
