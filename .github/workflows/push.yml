@@ -5,8 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Dependencies
-        run: |
-        sudo apt update -y && sudo apt install exlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra -y
+        run: sudo apt update -y && sudo apt install exlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra -y
       - name: Check out repository code
         uses: actions/checkout@v3
         with:
