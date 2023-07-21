@@ -13,4 +13,3 @@ clean:
 
 compile:
 	make -C tex/physics
-	# make -C tex/toxicity
