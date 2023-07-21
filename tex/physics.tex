@@ -1,5 +1,6 @@
 % chktex-file 44
 % chktex-file 8
+% chktex-file 3
 
 \documentclass{article}
 
@@ -324,13 +325,46 @@
     $161$ of these isotopes, $45$ of which have been observed in detail with no sign of
     decay. The lightest in any case is $\ce{^{36}Ar}$.
 
-    \subsection{Decay Chain}
+    \section{Decay Chain}
     A decay chain is a series of radioactive decays of different decay products
     as a series of transformations. Decay stages are referred to by their relationship
     to previous/subsequent stages.\\
 
     The most well known decay chain is the $4n$ chain of $\ce{^{232}Th}$. It is known
-    as the $4n$ chain due to the majority of decay modes being $\alpha$.
+    as the $4n$ chain due to the majority of decay modes being $\alpha$. The beginning
+    of the decay chain is shown below:
+
+    \begin{equation*}
+      \begin{split}
+        \ce{^{232}_{90}Th ->[\alpha][14\cdot{10^{9}} y] ^{228}_{88}Ra
+          ->[\beta{-}][5.7 y] ^{228}_{89}Ac ->[\beta-][6.1 hr] ^{228}_{90}Th
+          ->[\alpha][1.9 y] ^{224}_{88}Ra}
+      \end{split}
+    \end{equation*}
+
+    This chain ends at $\ce{^{208}Pb}$, and has $11$ steps, it splits at the
+    10th step, depending
+    on how $\ce{^{212}Bi}$ decays. If it decays via $\alpha$ ($35.94\%$ chance),
+    it converts to $\ce{^{212}Po}$ and then $\ce{^{208}Pb}$. If it decays via
+    $\beta{^{-}}$ ($64.05\%$ chance) it decays to Thallium and then Lead:
+
+    \begin{equation*}
+      \begin{split}
+        \ce{^{208}_{82}Pb <-[\beta{-}][3.1 min] ^{208}_{31}Tl <-[\alpha] ^{212}_{83}Bi
+            ->[\beta{-}] ^{212}_{84}Po ->[\alpha][3 \times 10^{-7}]
+            ^{208}_{82}Pb}
+      \end{split}
+    \end{equation*}
+
+    \subsection{Parent Isotope}
+    A parent isotope is an isotope that starts a decay chain. For example, uranium
+    (Z $=92$) decays into thorium (Z $=90$). The time it takes, for the parent isotope
+    to decay to the daughter isotope can vary. The decay of each atom, however, occurs
+    spontaneously.
+
+    \subsection{Daughter Isotope}
+    A daughter isotope is any isotope that is not the parent isotope. In the $4n$ decay
+    chain, every single isotope that is not $\ce{^{232}_{90}Th}$ is a daughter isotope. 
 
     \section{What is Spin?}
     Since an atomic nucleus is a particle of subatomic scale, it can be
