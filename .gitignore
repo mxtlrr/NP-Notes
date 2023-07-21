@@ -1,10 +1,19 @@
-tex/*.aux
-tex/*.synctex*
-tex/*.log
-tex/*.toc
-tex/*.f*
-tex/*.out
-tex/*.pdf
+# tex/physics/*.aux
+# tex/physics/*.synctex*
+# tex/physics/*.log
+# tex/physics/*.toc
+# tex/physics/*.f*
+# tex/physics/*.out
+# tex/physics/*.pdf
+
+tex/*/*.aux
+tex/*/*.synctex*
+tex/*/*.log
+tex/*/*.toc
+tex/*/*.f*
+tex/*/*.out
+tex/*/*.pdf
+
 
 # editor specific
 .vscode/
