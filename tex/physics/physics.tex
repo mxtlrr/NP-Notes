@@ -587,16 +587,6 @@
     space, pressure or anything like that.
     
     \subsection{The Decay Equation}
-    The equation,
-
-    \[
-      A = \lambda{N}
-    \]
-
-    calculates the activity ($A$) for a specified number of atoms in a
-    radionuclide ($N$). However, this equation is barely used because
-    $N$ is always decreasing.\\
-    
     On the bright side, the following few equations are useful because
     they tell us the number of atoms / activity of the radionuclide as
     a function of time:
@@ -640,9 +630,66 @@
       N_h = 1.443 \times \ln{\left( \frac{A_t}{A_0} \right)}
     \]
 
+    \section{Curies, Becquerels, and Activity}
+    A curie (Ci) and a becquerel (Bq) are both units that measure the amount a radioisotope
+    decays. $1 \text{ Bq}$ is equal to 1 decay per second, and $1 \text{ Ci}$ is equal to
+    $3.70 \times 10^{10} \text{ Bq}$. Since a curie is non-SI (not official), that means that
+
+
+    \subsection{Calculating Activity}
+    It can be calculated via the following formula:
+    \[
+      R = \lambda{N}\\
+    \]
+
+    $N$ is the amount of radioactive nuclei, and $\lambda$ is the decay constant, defined as
+    \[
+      \lambda = \frac{0.693}{t_{1/2}},
+    \]
+
+    where $t_{1/2}$ is the half-life. It should be noted that in the equation $R=\lambda{N}$,
+    $\lambda$ must be in seconds, so if you have some half life that is not in seconds, you
+    must convert it to seconds.
+
+    To calculate $N$, we must figure out the molar mass. This is generally going to be $A$ (e.g.
+    for $\ce{^{63}Cu}$, the molar mass is $63$). Then we multiply that by Avogrado's number:
+    \[
+      N = \frac{S}{M} \times \left(6.022 \times 10^{23}\right),
+    \]
+
+    where $S$ is the quantity of the sample in grams, and $M$ is the molar mass.
+
+    \subsubsection{Example}
+    Assume we have $0.56$ grams of $\ce{^{252}-Cf}$. What is it's activity in Curies? We know
+    two things:
+    \begin{enumerate}
+      \item Molar mass of the isotope ($252$)
+      \item The half life is $2.645$ years.
+    \end{enumerate}
+
+    So, let's do some math.
+    \begin{equation*}
+      \begin{split}
+        \lambda = \frac{0.693}{83412720} = 8.308 \cdot 10^{-9} \\
+        N = \frac{0.56}{252} \times \left(6.022 \times 10^{23}\right) \\
+          = 0.002 \times \left(6.022 \times 10^{23}\right) \\
+          = 1.338\times 10^{21}\\
+        \\
+        R = \lambda{N} = (8.308 \times 10^{-9}) \times (1.338 \times 10^{21}) \\
+        = \boxed{1.11161 \times 10^{13}}
+      \end{split}
+    \end{equation*}
+
+    Now that we have the decays per second, we should convert it into Curies:
+    \begin{equation*}
+      \begin{split}
+        R_C = \frac{1.111 \times 10^{13}}{3.7\times{10^{10}}} \\
+        = \boxed{300.2 \text{ Ci}}
+      \end{split}
+    \end{equation*}
     \section{Isomers}
     A nuclear isomer is a metastable state of an atomic nucleus. The term
-    `metastable' describes a nuclei whose excited states have half-lives $100$
+    `metastable' describes a ngod damn isuclei whose excited states have half-lives $100$
     to $1000$ times longer than the half-lives of the excited nuclear states
     that decay with a prompt half life.\\
 
