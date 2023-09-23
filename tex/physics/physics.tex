@@ -785,5 +785,94 @@
     It is now known that the sequence of spherical magic numbers cannot be extended in this
     way. Modern calculations predict $228$, and $308$ for neutrons.
 
+    \section{Critical Mass}
+    Critical mass is the smallest amount of fissile material for a chain reaction to
+    be sustained. This mass depends on the properties of the nuclide. In specific, this
+    refers to the nuclear fission cross-section.
+
+    \subsection{Explanation}
+    When a nuclear chain reaction is self-sustaining, said mass is said to be \textit{critical}.
+    When it is in this critical state there is \textbf{no increase or decrease} in energy. The
+    numerical measure of critical mass is dependent on something known as the \textbf{effective neutron multilpication factor}, k.\\
+
+    When $k < 1$, this is known as \textit{subcritical}. These masses are not able to sustain
+    a chain reaction. However, when $k = 1$, \textbf{the mass is critical}. Finally, when $k > 1$,
+    this is known as supercritical. Supercriticality is when, once fission begins, \textbf{will proceed at an increasing rate}.\\
+
+    It should be noted that supercritical materials are able to go back to criticality,
+    whether that is via destroying itself or elevated temperature.
+
+    \subsection{Effective Neutron Multiplication Factor}
+    Put it simply, the Effective Neutron Multiplication Factor (ENMF), denoted by $k$,
+    is the average number of neutrons fromone fission that will cause another fission. In
+    a reactor, k will oscillate from $k < 1$ to $k > 1$, which makes the average $k=1$.
+
+    \subsubsection{Six-Factor Formula}
+    $k$ can be defined in only 6 terms. The equation is:
+    \begin{equation*}
+      \begin{split}
+      k = P_\mathrm{FNL}\varepsilon pP_\mathrm{TNL} f\eta \\
+      0 < P_\mathrm{FNL} < 1 \\
+      1 < \varepsilon < \infty \\
+      \end{split}
+    \end{equation*}
+    
+    The factors in this equation are as such:
+    \begin{enumerate}
+      \item $P_\mathrm{FNL}$: This describes a probability of a
+      fast neutron will not escape the system without interacting. If
+      this is set to $1$ then fast neutrons will never escape without interacting,
+      thus creating an infinite system.
+      \item $\varepsilon$: Ratio of total fissions caused \textbf{only} by
+      thermal neutrons. If $\varepsilon=1$, it describes a system for which only
+      thermal neutrons are causing fission.
+      \item $p$: Ratio of the number of neutrons that begin thermalization to
+      the number of neutrons that reach thermal energies. Bounds are $0 < p < 1$.
+      $1$ defines a system in which no neutrons leak.
+      \item $P_\mathrm{TNL}$: Probability that a thermal neutron will not escape
+      the system without interacting. Bounds and definition for this factor is the same
+      as $P_\mathrm{FNL}$.
+      \item $f$: Ratio of number of thermal neutrons absorbed by fissile nuclei vs. the
+      number of neutrons absorbed in all materials in the system. Bounds are $0 < f < 1$.
+      $1$ denotes a system where everything is fissile nuclei. $0.5$ denotes a system that
+      reactions with fissile and non-nuclei are equal.
+      \item $\eta$ describes the probability that a neutron absorbed will cause a fission reaction.
+    \end{enumerate}
+
+    If the medium is infinite, however, you can set $P_\mathrm{FNL} = P_\mathrm{TNL} = 1$. Another
+    thing to note is that $P_\mathrm{FNL}$ is also written as $L_f$, and $P_\mathrm{TNL}$ is written
+    as $L_{th}$.
+
+    \subsection{Changing point of criticality}
+    There are various ways to perform this. They are shown in subsubsections below.
+
+    \subsubsection*{Varying amount of fuel}
+    \subsubsection*{Changing shape}
+    \subsubsection*{Changing temperature}
+    \subsubsection*{Varying density of mass}
+    \subsubsection*{Use of a neutron reflector}
+    \subsubsection*{Use of a tamper}
+
+    \subsection{Critical Mass Lookup Table}
+    Below is a table of fissile materials, and their critical mass as a bare sphere.\\
+    \begin{tabular}{|c|c|c|}
+      \hline
+      Nuclide & Critical (kg) & Diameter (cm) \\
+      \hline
+      U-233  & 15  & 11  \\
+      U-235  & 52  & 17  \\
+      Np-236 & 7   & 8.7 \\
+      Np-237 & 60  & 18  \\
+      Pu-238 & 9.04& 9.7 \\
+      Pu-239 & 10  & 9.9 \\
+      Pu-240 & 40  & 15  \\
+      Am-241 & 66  & 21.5\\
+      Cf-252 & 2.73& 6.9 \\
+      Es-254 & 9.89& 7.1 \\
+      \hline
+    \end{tabular}
+
+    
+
   \end{multicols*}
 \end{document}
