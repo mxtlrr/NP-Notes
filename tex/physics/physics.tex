@@ -45,7 +45,15 @@
       $1-20$ MeV & Fast neutrons \\
       $> 20$ MeV & Ultrafast neutrons \\
       \hline
-    \end{tabular}
+    \end{tabular}\\
+
+    To convert eV to Joules, for use in neutron flux (see below), you just
+    divide it by $6.242 \times 10^{18}$:
+    \[
+      E_J = \frac{E_e}{6.242\times10^{18}}
+    \]
+
+    For MeV, you just divide by $6.242\times10^{12}$.
 
 
     \section{Neutron Flux and Neutron Fluence}
@@ -73,5 +81,9 @@
     \[
       L = \varphi{t}.
     \]
+
+    $t$ is the duration of your flux `experiment', in seconds.
+
+    \section{Neutron Cross Section}
   \end{multicols*}
 \end{document}
