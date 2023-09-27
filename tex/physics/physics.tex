@@ -50,6 +50,28 @@
 
     \section{Neutron Flux and Neutron Fluence}
     \subsection{Neutron Flux}
+    Neutron flux is a measure of the intensity of neutron radiation,
+    which is determined by the rate of flow of neutrons. It is calculated
+    via
+    \[
+      \varphi = nv,
+    \] 
+
+    where $n$ is the neutron density, and $v$ is the distance neutrons travel
+    in one second. $n$ is approximately $1.78\cdot 10^{53}$ To find $v$, you can do,
+      \[
+        v = \frac{v_1}{v_2}
+      \]\[
+        v_1 = \sqrt{\frac{2E}{m}},\;\;\;
+        v_2 = 1 \cdot \left(1 \cdot 10^{15}\right),
+      \]
+
+      where $E$ is the energy of the neutron in Joules and $m$ is the mass of a neutron.
+
     \subsection{Neutron Fluence}
+    Neutron fluence is just neutron flux multiplied by time $t$:
+    \[
+      L = \varphi{t}.
+    \]
   \end{multicols*}
 \end{document}
