@@ -85,5 +85,69 @@
     $t$ is the duration of your flux `experiment', in seconds.
 
     \section{Neutron Cross Section}
+    Neutron cross section is a unit used to express the \textbf{likelihood} that
+    a target neutron will impact a neutron. The reaction between a nucleus and a
+    neutron is
+    \[
+      \ce{^{A}_{Z}X + ^{1}_{0}n -> ^{A+1}_{Z}X}
+    \]
+
+    The equation to calculate neutron cross-section is as follows:
+    \[
+      \sigma_t = \frac{C}{N_a \times I_0},
+    \]
+
+    where $C$ is the number of interactions, $N_a$ is atom density, and finally,
+    $I_0$ is neutron fluence (intensity). To calculate $N_a$, you use this formula:
+    \[
+      N_a = \frac{D\times(6.02\cdot10^{23})}{M},
+    \]
+
+    where $D$ is the density of the radioisotope, and $M$ is the mass (in Da) of
+    said radionuclide.
+
+    \subsection{Example -- Copper-63}
+    The first step we want to do is figure out neutron flux, then do neutron fluence,
+    and finally calculate neutron cross section. For this example, let's say we're only
+    dealing with 200 interactions.
+
+    \subsubsection{Neutron Fluence}
+    First we need to figure out $\varphi$ (neutron flux),
+    \begin{equation*}
+      \begin{split}
+        \varphi = nv = 1.78\times10^{53} \cdot v\\
+        v = \frac{\sqrt{\frac{2\left(4.005\times10^{-21}\right)}{1.674\times10^{-27}}}}{1\cdot \left(1\times10^{15}\right)}\\
+        = \frac{2187.45}{1\times10^{15}}\\
+        = 2.187 \times 10^{-12}\\
+        \varphi = \left(1.78\times10^{53}\right) \cdot \left(2.18 \times 10^{-12}\right)\\
+        = \boxed{3.89 \times 10^{41}}.
+      \end{split}
+    \end{equation*}
+
+    The next step is to multiply it by the duration of our experiment, which is going to
+    be 0.1 seconds as an example:
+    \begin{equation*}
+      \begin{split}
+      L = 0.1\varphi\\
+      = 0.1 \times 3.89\times10^{41}\\
+      = 3.80\times10^{40}.
+      \end{split}
+    \end{equation*}
+
+    Now for the fun part. Since we have the neutron fluence, we can calculate the neutron
+    cross-section.
+
+    \begin{equation*}
+      \begin{split}
+        N_a = \frac{7.93 \times \left(6.02\cdot 10^{23}\right)}{62.9}\\
+        = \frac{4.773\times 10^{24}}{62.9}\\
+        = \boxed{7.58\times10^{22}}\\\\
+        \sigma = \frac{200}{\left(7.58 \times 10^{22}\right) \times \left(3.89\times10^{40}\right)}\\
+        = \frac{200}{2.949\times10^{63}}\\
+        = \boxed{6.78 \times 10^{-62}}
+      \end{split}
+    \end{equation*}
+    Thus, the neutron cross section for 200 thermal neutrons for $\ce{^{63}_{29}Cu}$ is
+    $6.78 \times 10^{-62}\;$ barns.
   \end{multicols*}
 \end{document}
